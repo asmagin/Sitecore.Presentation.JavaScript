@@ -15,8 +15,8 @@ install:
 - ps: Install-Product node $env:nodejs_version
 before_build:
 - cmd: nuget restore .\src\Sitecore.Js.Presentation.sln
-# after_build:
-# - cmd: cd .\sample && npm run build:prod
+after_build:
+- cmd: cd .\sample && npm run build:prod
 build:
   publish_nuget: true
   verbosity: minimal
