@@ -25,7 +25,7 @@ after_build:
 artifacts:
 - path: '**\Sitecore.Js.Presentation.Sample.zip'
   name: UI Sample
-- path: '**\*.nupkg'
+- path: '**\Sitecore.Js.Presentation.*.nupkg'
   name: NuGet Package
 build:
   publish_nuget: true
@@ -39,3 +39,7 @@ deploy:
   name: GitHub Releases Sitecore.Js.Presentation
   on:
     branch: master
+cache:
+  - src\packages -> **\packages.config        # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
+  - sample\node_modules -> **\packages.json   # local npm modules
+  - '%APPDATA%\npm-cache'                     # npm cache
