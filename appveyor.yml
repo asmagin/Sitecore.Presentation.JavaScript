@@ -16,13 +16,14 @@ install:
 before_build:
 - cmd: nuget restore .\src\Sitecore.Js.Presentation.sln
 after_build:
-- cmd: cd .\sample && npm run build:prod
+- node --version
+- npm --version
+- cd .\sample 
+- npm i
+- npm run build:prod
 build:
   publish_nuget: true
   verbosity: minimal
-test_script:
-- node --version
-- npm --version
 deploy:
 - provider: Environment
   name: NuGet.org
