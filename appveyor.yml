@@ -9,11 +9,20 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
+environment:
+  nodejs_version: 6
+install:
+- ps: Install-Product node $env:nodejs_version
 before_build:
 - cmd: nuget restore .\src\Sitecore.Js.Presentation.sln
+# after_build:
+# - cmd: cd .\sample && npm run build:prod
 build:
   publish_nuget: true
   verbosity: minimal
+test_script:
+- node --version
+- npm --version
 deploy:
 - provider: Environment
   name: NuGet.org

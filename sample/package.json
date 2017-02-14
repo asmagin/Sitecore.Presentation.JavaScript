@@ -7,15 +7,11 @@
   "keywords": [],
   "author": "Your name here",
   "scripts": {
-    "clean": "rimraf dist/*",
-    "copy": "copyfiles -f ./src/*.html ./src/favicon.ico ./dist && copyfiles ./dist/**/*.* ./../../sandbox/Website/Areas/Alex",
-    "dev": "concurrently --kill-others \"webpack-dev-server\" \"json-server --watch ./api-stub/db.json --routes ./api-stub/routes.json\"",
+    "dev": "npm run build:dev && concurrently --kill-others \"webpack-dev-server\" \"json-server --watch ./api-stub/db.json --routes ./api-stub/routes.json\"",
     "build:prod": "cross-env NODE_ENV=production webpack --progress",
     "build:dev": "cross-env NODE_ENV=development webpack --progress",
     "server:dev": "cross-env NODE_ENV=server.dev webpack",
     "server:prod": "cross-env NODE_ENV=server.prod webpack",
-    "serve": "node server.js --env=dev",
-    "serve:dist": "node server.js --env=dist",
     "start": "npm run dev",
     "test:dev": "cross-env NODE_ENV=test karma start",
     "test:ci": "cross-env NODE_ENV=test karma start --no-auto-watch --single-run"
