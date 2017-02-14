@@ -20,12 +20,18 @@ after_build:
 - npm --version
 - cd .\sample 
 - npm i
-- npm run build:prod
+- npm run server:dev
+- 7z a Sitecore.Js.Presentation.Sample.zip %APPVEYOR_BUILD_FOLDER%\sample\dist
 build:
   publish_nuget: true
   verbosity: minimal
 deploy:
 - provider: Environment
   name: NuGet.org
+  on:
+    branch: master
+- provider: Environment
+  name: GitHub Releases Sitecore.Js.Presentation
+  artifact: Sitecore.Js.Presentation.Sample.zip
   on:
     branch: master
