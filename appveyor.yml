@@ -21,12 +21,10 @@ after_build:
 - cd .\sample 
 - npm i
 - npm run server:dev
-- 7z a Sitecore.Js.Presentation.Sample.zip %APPVEYOR_BUILD_FOLDER%\sample\dist
+- 7z a Sitecore.Js.Presentation.Sample.zip %APPVEYOR_BUILD_FOLDER%\sample\dist\
 artifacts:
 - path: '**\Sitecore.Js.Presentation.Sample.zip'
-  name: UI Sample
 - path: '**\Sitecore.Js.Presentation.*.nupkg'
-  name: NuGet Package
 build:
   publish_nuget: true
   verbosity: minimal

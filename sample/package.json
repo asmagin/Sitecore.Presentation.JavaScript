@@ -1,11 +1,12 @@
 {
+  "name": "sitecore.js.presenation.sample",
   "private": true,
   "version": "0.0.1",
   "description": "Sitecore project demo",
   "main": "",
   "repository": "",
   "keywords": [],
-  "author": "Your name here",
+  "author": "Alex Smagin",
   "scripts": {
     "dev": "npm run build:dev && concurrently --kill-others \"webpack-dev-server\" \"json-server --watch ./api-stub/db.json --routes ./api-stub/routes.json\"",
     "build:prod": "cross-env NODE_ENV=production webpack --progress",
