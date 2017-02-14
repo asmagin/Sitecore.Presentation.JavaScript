@@ -28,6 +28,7 @@ artifacts:
 - path: '**\Sitecore.Js.Presentation.*.nupkg'
   name: NuGet Package
 build:
+  project: .\src\Sitecore.Js.Presentation.sln
   publish_nuget: true
   verbosity: minimal
 deploy:
