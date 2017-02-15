@@ -9,6 +9,7 @@ class SimpleContent extends React.Component {
   render() {
     return (
       <Grid className='simple-content'>
+        <div style={{fontSize: '8px', color: '#444'}} >** react component **</div>
         <Row>
           <Col xs={12} md={4}>
           <div dangerouslySetInnerHTML={{ __html: this.props.data.image }} /></Col>
