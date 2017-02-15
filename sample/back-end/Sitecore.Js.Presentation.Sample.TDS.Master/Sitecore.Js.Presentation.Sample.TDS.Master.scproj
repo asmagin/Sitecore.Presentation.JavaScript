@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ee59e117-2c3b-4a9b-941f-a46ac7bac4ec</ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <SourceWebPhysicalPath>..\Sitecore.Js.Presentation.Sample.Web</SourceWebPhysicalPath>
-    <SourceWebProject>{d9d50a5c-26fe-4cb2-94fe-e15dd3a8a4c7}|Sitecore.Js.Presentation.Sample.Web\Sitecore.Js.Presentation.Sample.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\Sitecore.Js.Presentation.Sample</SourceWebPhysicalPath>
+    <SourceWebProject>{d9d50a5c-26fe-4cb2-94fe-e15dd3a8a4c7}|Sitecore.Js.Presentation.Sample\Sitecore.Js.Presentation.Sample.csproj</SourceWebProject>
     <SourceWebVirtualPath>/Sitecore.Js.Presentation.Sample.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
@@ -59,10 +59,10 @@
     <PackageName>Sitecore.Js.Presentation.Sample.Master</PackageName>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
-    <PackageExcludeCode>True</PackageExcludeCode>
+    <PackageExcludeCode>False</PackageExcludeCode>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
-    <PackageAuthor>EPAM Systems</PackageAuthor>
-    <PackagePublisher>EPAM Systems</PackagePublisher>
+    <PackageAuthor>Alex Smagin</PackageAuthor>
+    <PackagePublisher>Alex Smagin</PackagePublisher>
     <PackageReadme>Sitecore.Js.Presentation.Sample.Master</PackageReadme>
     <PackageVersion>1.0</PackageVersion>
     <SitecoreAssemblyPath>
@@ -150,7 +150,7 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sitecore.Js.Presentation.Sample.Web\Sitecore.Js.Presentation.Sample.csproj">
+    <ProjectReference Include="..\Sitecore.Js.Presentation.Sample\Sitecore.Js.Presentation.Sample.csproj">
       <Project>{d9d50a5c-26fe-4cb2-94fe-e15dd3a8a4c7}</Project>
       <Name>Sitecore.Js.Presentation.Sample</Name>
     </ProjectReference>
